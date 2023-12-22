@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "name": "17-type-narrowing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

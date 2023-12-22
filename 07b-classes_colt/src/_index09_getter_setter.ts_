@@ -1,0 +1,34 @@
+// getter and setter
+class Player {
+    
+    constructor(
+        public first: string,
+        public last:string,
+        private _score: number
+    ) {}
+    
+    private secretMEtod(): void{
+        console.log("Secret Method!!!!")
+    }
+    
+    get fullName() {
+        return `${this.first} ${this.last}`
+    }
+
+    get score(): number {
+        return this._score
+    }
+
+    set score(newScore: number) {
+        if(newScore < 0) {
+            throw new Error ("Score can not be negative")
+        }
+        this._score = newScore
+    }
+}
+
+const elton = new Player("Elton", "John", 50)
+
+console.log(elton.fullName)
+console.log(elton.score);
+

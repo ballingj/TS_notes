@@ -1,0 +1,48 @@
+// Protected properties - used to access class properties by child classes -- Inheritance
+
+/* 
+public properties - accessible from anywhere
+private properties - only accessible from the class
+protected properties - accessible by the class and child classes
+*/
+
+class Player {
+    
+    constructor(
+        public first: string,
+        public last:string,
+        protected _score: number
+    ) {}
+    
+    private secretMEtod(): void{
+        console.log("Secret Method!!!!")
+    }
+    
+    get fullName() {
+        return `${this.first} ${this.last}`
+    }
+
+    get score(): number {
+        return this._score
+    }
+
+    set score(newScore: number) {
+        if(newScore < 0) {
+            throw new Error ("Score can not be negative")
+        }
+        this._score = newScore
+    }
+}
+
+const elton = new Player("Elton", "John", 50)
+
+console.log(elton.fullName)
+console.log(elton.score);
+
+class SuperPlayer extends Player {
+    public isAdmin: boolean = true
+    maxScore() {
+        this._score = 9999999
+    }
+}
+
