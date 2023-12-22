@@ -5,10 +5,11 @@ tsc --init
 > this will create a tsconfig.json file
 
 ## create a dist and src subdirectory under the project directory
-| >dist
-| >src
-| tsconfig.json
-![typical file structure](image.png)
+ >dist
+ >src
+ tsconfig.json
+
+![typical file structure](file_struct.png)
 
 ## Modify the tsconfig.json file
 1. find the line under /* Language and Environment */ and change to es2016.

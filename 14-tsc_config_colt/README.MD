@@ -5,9 +5,10 @@ tsc --init
 > this will create a tsconfig.json file
 
 ## create a dist and src subdirectory under the project directory
-| >dist
-| >src
-| tsconfig.json
+>dist
+>src
+tsconfig.json
+
 ![typical file structure](image.png)
 
 ## Modify the tsconfig.json file
